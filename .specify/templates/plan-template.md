@@ -29,9 +29,20 @@
 
 ## Constitution Check
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+*This section ensures alignment with the project's core structure as defined in the constitution.*
 
-[Gates determined based on constitution file]
+- **Chapter Alignment**: Does this feature or module fit within one of the book's chapters?
+  - `[ ]` I. The Robotic Nervous System (ROS 2)
+  - `[ ]` II. The Digital Twin (Gazebo & Unity)
+  - `[ ]` III. The AI-Robot Brain (NVIDIA Isaac)
+  - `[ ]` IV. Vision-Language-Action (VLA)
+  - `[ ]` V. Why Physical AI Matters
+  - `[ ]` VI. Learning Outcomes
+  - `[ ]` VII. Weekly Breakdown
+  - `[ ]` VIII. Assessments
+  - `[ ]` IX. Hardware Requirements
+  - `[ ]` N/A - This work is foundational and supports all chapters.
+- **Rationale**: (Briefly explain the alignment)
 
 ## Project Structure
 

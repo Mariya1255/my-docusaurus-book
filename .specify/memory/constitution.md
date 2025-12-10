@@ -1,55 +1,60 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: 0.0.0 -> 1.0.0
+- Modified principles: Principles section replaced with Chapters.
+- Added sections:
+  - I. The Robotic Nervous System (ROS 2)
+  - II. The Digital Twin (Gazebo & Unity)
+  - III. The AI-Robot Brain (NVIDIA Isaac)
+  - IV. Vision-Language-Action (VLA)
+  - V. Why Physical AI Matters
+  - VI. Learning Outcomes
+  - VII. Weekly Breakdown
+  - VIII. Assessments
+  - IX. Hardware Requirements
+- Removed sections:
+  - [PRINCIPLE_1_NAME] to [PRINCIPLE_6_NAME]
+  - [SECTION_2_NAME]
+  - [SECTION_3_NAME]
+- Templates requiring updates:
+  - ✅ .specify/templates/plan-template.md
+  - ⬜️ .specify/templates/spec-template.md
+  - ⬜️ .specify/templates/tasks-template.md
+- Follow-up TODOs: None
+-->
+# Humanoid Robotics Book Constitution
 
-## Core Principles
+## Core Chapters
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. The Robotic Nervous System (ROS 2)
+This chapter introduces the Robot Operating System (ROS 2) as the foundational framework for building modular and communicative robot behaviors. It covers core concepts like nodes, topics, services, and actions, enabling robust data flow and control for complex robotic systems.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. The Digital Twin (Gazebo & Unity)
+This section explores the creation of high-fidelity simulations, or "Digital Twins," using Gazebo and Unity. It details how to model robot kinematics, sensors, and environments to accelerate development, testing, and validation of robotic algorithms before deploying to physical hardware.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. The AI-Robot Brain (NVIDIA Isaac)
+Here, we delve into NVIDIA's Isaac platform for developing and deploying AI-powered robotics applications. The focus is on leveraging GPU-accelerated libraries for perception, navigation, and manipulation, and integrating them with ROS 2 for end-to-end robotic intelligence.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Vision-Language-Action (VLA)
+This chapter covers advanced AI models that connect vision, natural language understanding, and robotic actions. We explore how Vision-Language-Action (VLA) models enable robots to understand and execute complex commands given in natural language, bridging the gap between human intent and robot behavior.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Why Physical AI Matters
+A discussion on the importance of embodiment and physical interaction for developing truly intelligent systems. This chapter argues that real-world challenges drive advancements in AI and robotics, leading to more robust and adaptable solutions.
 
-### [PRINCIPLE_6_NAME]
+### VI. Learning Outcomes
+Defines the key skills and knowledge students will acquire throughout the course. This includes proficiency in ROS 2, simulation tools, AI integration, and an understanding of the principles of Physical AI.
 
+### VII. Weekly Breakdown
+Provides a week-by-week schedule of topics, readings, and assignments. This structured plan guides the learner through the course material in a logical and progressive manner.
 
-[PRINCIPLE__DESCRIPTION]
+### VIII. Assessments
+Details the methods used to evaluate learning, including projects, quizzes, and a final exam. The assessment strategy is designed to measure both theoretical understanding and practical application of the concepts covered.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### IX. Hardware Requirements
+Lists the necessary hardware for completing the course's practical exercises. This may include specific robot kits, sensors, and computational resources (e.g., NVIDIA Jetson).
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+Amendments to this constitution require a formal proposal and review process. All project artifacts, including specifications, plans, and tasks, must align with the principles and structures outlined herein.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-08 | **Last Amended**: 2025-12-08
