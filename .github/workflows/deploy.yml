@@ -14,33 +14,43 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
+
 jobs:
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
-      # 👇 Build steps
+
+      # ✔ Node.js setup
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20.x
+          node-version: 20
           cache: 'npm'
+
+      # ✔ "npm ci" ko remove kar diya — yeh error kar raha tha
       - name: Install dependencies
-        run: npm ci
-      - name: Build
+        run: npm install
+
+      # ✔ Build the Docusaurus project
+      - name: Build website
         run: npm run build
-      # 👆 Build steps
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
+      # ✔ Build output path set to build/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # 👇 Specify build output path
           path: build
+
+      # ✔ Deploy final build to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
