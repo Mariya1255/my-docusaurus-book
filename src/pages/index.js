@@ -11,7 +11,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">Humanoid Robotics: A Comprehensive Guide</h1>
+        <h1 className="hero__title">Physical AI & Humanoid Robotics</h1>
         <p className="hero__subtitle">
           This book provides an in-depth exploration of humanoid robotics, covering foundational concepts,
           core technologies like ROS2 and digital twins, advanced AI applications such as VLA,

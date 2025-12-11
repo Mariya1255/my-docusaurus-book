@@ -4,32 +4,32 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Explore Core Foundations',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Dive deep into the foundational concepts of Physical AI and Humanoid Robotics.
+        Understand the principles that drive intelligent robotic systems.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
+    title: 'Master Advanced AI & Robotics',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Learn about cutting-edge AI techniques applied to humanoid robots,
+        including visual language models and advanced control systems.
+      </>
+    ),
+  },
+  {
+    title: 'Practical Simulation & Development',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    description: (
+      <>
+        Gain hands-on experience with ROS2, digital twins, and simulation environments
+        to build and test your own humanoid robotic solutions.
       </>
     ),
   },
