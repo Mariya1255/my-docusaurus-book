@@ -11,15 +11,18 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <h1 className="hero__title">Humanoid Robotics: A Comprehensive Guide</h1>
+        <p className="hero__subtitle">
+          This book provides an in-depth exploration of humanoid robotics, covering foundational concepts,
+          core technologies like ROS2 and digital twins, advanced AI applications such as VLA,
+          and practical simulation techniques. Dive into the world of physical AI and
+          discover the future of robotics with detailed insights and practical guidance.
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Start Reading
+            Start Reading 📖
           </Link>
         </div>
       </div>
