@@ -1,0 +1,46 @@
+# .gitignore for Docusaurus projects
+# This file is typically created by the Docusaurus init command.
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Build output
+/build
+/.docusaurus
+dist/
+
+# Runtime data
+/.cache
+
+# Debug files
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*
+
+# IDEs
+.idea/
+.vscode/
+*.suo
+*.njsproj
+*.sln
+*.sw?
+
+# misc
+*.log
+# Yarn Integrity file
+.yarn-integrity
+
+# Docusaurus v2 specific:
+# This ensures that your site always builds with the same Docusaurus version
+# if you don't commit it, your CI might pick up a newer version that breaks the build
+# Remove if you want to use the latest version always
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*

@@ -1,49 +1,56 @@
+import React from 'react';
 import clsx from 'clsx';
-import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Explore Core Foundations',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Module 1: The Robotic Nervous System (ROS 2)',
+    icon: '🧠',
     description: (
       <>
-        Dive deep into the foundational concepts of Physical AI and Humanoid Robotics.
-        Understand the principles that drive intelligent robotic systems.
+        Learn the fundamentals of the Robot Operating System (ROS 2), including nodes, topics, services, and actions. Master Python (rclpy) integration and build URDF models for humanoid robots.
       </>
     ),
   },
   {
-    title: 'Master Advanced AI & Robotics',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Module 2: The Digital Twin (Gazebo & Unity)',
+    icon: '🤖',
     description: (
       <>
-        Learn about cutting-edge AI techniques applied to humanoid robots,
-        including visual language models and advanced control systems.
+        Create realistic simulations of your robots and environments. This module covers physics simulation, environment building, and sensor integration for LiDAR, depth cameras, and IMUs.
       </>
     ),
   },
   {
-    title: 'Practical Simulation & Development',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Module 3: The AI-Robot Brain (NVIDIA Isaac)',
+    icon: '💡',
     description: (
       <>
-        Gain hands-on experience with ROS2, digital twins, and simulation environments
-        to build and test your own humanoid robotic solutions.
+        Dive into the NVIDIA Isaac ecosystem for advanced robotics. You'll work with Isaac Sim and Isaac ROS for path planning (Nav2), VSLAM, and navigation.
+      </>
+    ),
+  },
+  {
+    title: 'Module 4: Vision-Language-Action (VLA)',
+    icon: '🗣️',
+    description: (
+      <>
+        Implement cutting-edge AI models for human-robot interaction. This includes voice-to-action with Whisper, LLM-based task planning, and multi-modal interactions.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({title, icon, description}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={clsx('col col--3', styles.feature)}>
+      <div className="card">
+        <div className="card__header">
+          <h3>{icon} {title}</h3>
+        </div>
+        <div className="card__body">
+          <p>{description}</p>
+        </div>
       </div>
     </div>
   );

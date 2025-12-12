@@ -6,29 +6,196 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #00a8ff; /* Bright blue for accents */
+  --ifm-color-primary-dark: #0094e0;
+  --ifm-color-primary-darker: #008ac9;
+  --ifm-color-primary-darkest: #0070a3;
+  --ifm-color-primary-light: #1ab2ff;
+  --ifm-color-primary-lighter: #33baff;
+  --ifm-color-primary-lightest: #66cfff;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: 'Roboto Mono', 'Courier New', monospace;
+  --ifm-background-color: #0a0a0a; /* Very dark background */
+  --ifm-font-color-base: #e0e0e0; /* Light gray text */
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #00a8ff;
+  --ifm-color-primary-dark: #0094e0;
+  --ifm-color-primary-darker: #008ac9;
+  --ifm-color-primary-darkest: #0070a3;
+  --ifm-color-primary-light: #1ab2ff;
+  --ifm-color-primary-lighter: #33baff;
+  --ifm-color-primary-lightest: #66cfff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-background-color: #0a0a0a;
+  --ifm-font-color-base: #e0e0e0;
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--ifm-color-primary);
+  font-family: 'Orbitron', sans-serif; /* Futuristic font for headings */
+}
+
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  padding: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 168, 255, 0.2);
+}
+
+.card__header h3 {
+  color: #00a8ff;
+}
+
+.card__body p {
+  color: #ccc;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #556B2F;
+}
+
+.navbar__title, .navbar__link {
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.navbar__link:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* Hero Section */
+.hero-container {
+    background: linear-gradient(180deg, #0a0a0a, #1a1a1a);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 168, 255, 0.1), transparent 40%);
+    animation: glow 10s infinite linear;
+}
+
+@keyframes glow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.hero__title {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.hero__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-stats {
+    background-color: rgba(26, 26, 26, 0.8);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.stat-item {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.stat-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Modules Section */
+.modules {
+    padding: 4rem 0;
+}
+
+.card-demo {
+    height: 100%;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 168, 255, 0.3);
+  border-color: var(--ifm-color-primary);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+/* Hardware & Learning Outcomes */
+.hardware, .learningOutcomes {
+    padding: 4rem 0;
+}
+
+.info-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    height: 100%;
+}
+
+@media screen and (max-width: 996px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-stats {
+        margin-top: 2rem;
+    }
+
+    .buttons {
+      justify-content: center;
+    }
 }

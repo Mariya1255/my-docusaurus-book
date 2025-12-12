@@ -38,8 +38,7 @@ const config = {
       i18n: {
         defaultLocale: 'en',
         locales: ['en'],
-      },
-    
+      },    
       presets: [
         [
           'classic',
@@ -72,11 +71,14 @@ const config = {
             respectPrefersColorScheme: true,
           },
           navbar: {
-          title: 'My Site',
-          logo: {
-            alt: 'Humanoid Robotics Book Logo',
-            src: 'img/logo.svg',
-          },
+            title: 'Physical AI & Humanoid Robotics',
+            style: {
+              backgroundColor: '#556B2F',
+            },
+            logo: {
+              alt: 'Humanoid Robotics Book Logo',
+              src: 'img/logo.svg',
+            },
             items: [
               {
                 type: 'docSidebar',
@@ -95,47 +97,73 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Course Navigation',
             items: [
               {
-                label: 'Book',
+                label: 'Home',
+                to: '/',
+              },
+              {
+                label: 'Course Outline',
                 to: '/docs/intro',
               },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Textbook',
+                to: '/docs/intro',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Hardware Guide',
+                to: '/docs/hardware-guide',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Simulation Setup',
+                to: '/docs/simulation',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Resources',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/<YOUR_GITHUB_USERNAME>/humanoid-robotics-book',
+                label: 'Documentation',
+                href: 'https://docusaurus.io/',
+              },
+              {
+                label: 'Tutorials',
+                href: 'https://docusaurus.io/docs/category/getting-started',
+              },
+              {
+                label: 'Support',
+                href: 'https://github.com/Mariya1255/humanoid-robotics-book/issues',
+              },
+            ],
+          },
+          {
+            title: 'Legal',
+            items: [
+              {
+                label: 'Terms of use',
+                to: '/terms',
+              },
+              {
+                label: 'Privacy Policy',
+                to: '/privacy',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      stylesheets: [
+        {
+          href: 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono&display=swap',
+          rel: 'stylesheet',
+        },
+      ],
     }),
 };
 
