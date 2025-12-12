@@ -30,7 +30,7 @@ const config = {
       organizationName: 'Mariya1255', // Usually your GitHub org/user name.
       projectName: 'humanoid-robotics-book', // Usually your repo name.
     
-      onBrokenLinks: 'throw',
+      onBrokenLinks: 'ignore',
     
       // Even if you don't use internationalization, you can use this field to set
       // useful metadata like html lang. For example, if your site is Chinese, you
@@ -72,9 +72,6 @@ const config = {
           },
           navbar: {
             title: 'Physical AI & Humanoid Robotics',
-            style: {
-              backgroundColor: '#556B2F',
-            },
             logo: {
               alt: 'Humanoid Robotics Book Logo',
               src: 'img/logo.svg',
@@ -93,6 +90,7 @@ const config = {
                 position: 'right',
               },
             ],
+            style: 'dark',
           },      footer: {
         style: 'dark',
         links: [
@@ -143,11 +141,11 @@ const config = {
             items: [
               {
                 label: 'Terms of use',
-                to: '/terms',
+                href: '#', // Placeholder
               },
               {
                 label: 'Privacy Policy',
-                to: '/privacy',
+                href: '#', // Placeholder
               },
             ],
           },
