@@ -20,10 +20,10 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://Mariya1255.github.io',
+  url: 'https://your-vercel-domain.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-      baseUrl: '/my-docusaurus-book/',
+  // For Vercel deployment, use root path
+      baseUrl: '/',
       
       // GitHub pages deployment config.
       // If you aren't using GitHub pages, you don't need these.
@@ -73,19 +73,24 @@ const config = {
           navbar: {
             title: 'Physical AI & Humanoid Robotics',
             logo: {
-              alt: 'Humanoid Robotics Book Logo',
-              src: 'img/logo.svg',
+              alt: 'Physical AI & Humanoid Robotics Textbook Logo',
+              src: 'img/logo-light.svg',
+              srcDark: 'img/logo-dark.svg',
             },
             items: [
               {
                 type: 'docSidebar',
                 sidebarId: 'bookSidebar',
                 position: 'left',
-                label: 'Book',
+                label: 'Textbook',
               },
-              {to: '/blog', label: 'Blog', position: 'left'},
               {
-                href: 'https://github.com/Mariya1255/humanoid-robotics-book',
+                to: '/',
+                label: 'Home',
+                position: 'left',
+              },
+              {
+                href: 'https://github.com/Mariya1255/my-docusaurus-book',
                 label: 'GitHub',
                 position: 'right',
               },
