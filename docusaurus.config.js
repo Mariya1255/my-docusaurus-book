@@ -20,7 +20,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-vercel-domain.vercel.app',
+  url: 'https://my-docusaurus-book-peach.vercel.app/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For Vercel deployment, use root path
       baseUrl: '/',

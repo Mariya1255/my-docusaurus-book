@@ -168,7 +168,7 @@ function HomepageHeader() {
                 </Link>
                 <Link
                     className="button button--secondary button--lg"
-                    to="/my-docusaurus-book/docs/intro">
+                    to="/docs/intro">
                     Read the Textbook
                 </Link>
                 <Link
