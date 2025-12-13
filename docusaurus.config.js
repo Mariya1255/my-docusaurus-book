@@ -53,8 +53,8 @@ const config = {
       title: 'Physical AI & Humanoid Robotics',
       logo: {
         alt: 'Physical AI & Humanoid Robotics Textbook Logo',
-        src: 'img/logo-light.svg',
-        srcDark: 'img/logo-dark.svg',
+        src: '/img/docusaurus_light.svg',
+        srcDark: '/img/docusaurus_dark.svg'',
       },
       items: [
         { type: 'docSidebar', sidebarId: 'bookSidebar', position: 'left', label: 'Textbook' },
