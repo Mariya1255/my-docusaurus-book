@@ -157,24 +157,24 @@ function HomepageHeader() {
         <div className="hero-content">
             <div>
                 <Heading as="h1" className="hero__title">
-                Physical AI & Humanoid R0botics
+                Physical AI & Humanoid Robotics
                 </Heading>
                 <p className="hero__subtitle">{`"Where Intelligence Becomes Physical."`}</p>
                 <div className={styles.buttons}>
                 <Link
                     className="button button--secondary button--lg"
                     to="/docs/intro">
-                    Start the Textbook
-                </Link>
-                <Link
-                    className="button button--secondary button--lg"
-                    to="/docs/intro">
-                    Read the Textbook
+                    Get Started
                 </Link>
                 <Link
                     className="button button--secondary button--lg"
                     to="#modules">
                     Explore Modules
+                </Link>
+                <Link
+                    className="button button--secondary button--lg"
+                    to="https://github.com/Mariya1255/my-docusaurus-book">
+                    View on GitHub
                 </Link>
                 </div>
             </div>
