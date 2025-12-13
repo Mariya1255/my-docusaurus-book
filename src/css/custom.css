@@ -6,37 +6,69 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #00a8ff; /* Bright blue for accents */
-  --ifm-color-primary-dark: #0094e0;
-  --ifm-color-primary-darker: #008ac9;
-  --ifm-color-primary-darkest: #0070a3;
-  --ifm-color-primary-light: #1ab2ff;
-  --ifm-color-primary-lighter: #33baff;
-  --ifm-color-primary-lightest: #66cfff;
+  --ifm-color-primary: #6B8E23; /* Olive green */
+  --ifm-color-primary-dark: #556B2F; /* Darker olive green */
+  --ifm-color-primary-darker: #4A5A29; /* Even darker olive green */
+  --ifm-color-primary-darkest: #3D4A21; /* Darkest olive green */
+  --ifm-color-primary-light: #8FAD4F; /* Lighter olive green */
+  --ifm-color-primary-lighter: #A8C26F; /* Even lighter olive green */
+  --ifm-color-primary-lightest: #C4D79B; /* Lightest olive green */
+  --ifm-color-secondary: #D2B48C; /* Light brown (tan) */
+  --ifm-color-success: #6B8E23; /* Olive green */
+  --ifm-color-info: #8B4513; /* Saddle brown */
+  --ifm-color-warning: #DEB887; /* Light brown (burlywood) */
+  --ifm-color-danger: #A0522D; /* Sienna brown */
+  --ifm-color-purple: #8B7355; /* Brownish purple */
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-font-family-base: 'Roboto Mono', 'Courier New', monospace;
-  --ifm-background-color: #0a0a0a; /* Very dark background */
-  --ifm-font-color-base: #e0e0e0; /* Light gray text */
+  --ifm-background-color: #FAF9F6; /* Light cream background */
+  --ifm-font-color-base: #2F4F4F; /* Dark slate gray for better contrast */
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #00a8ff;
-  --ifm-color-primary-dark: #0094e0;
-  --ifm-color-primary-darker: #008ac9;
-  --ifm-color-primary-darkest: #0070a3;
-  --ifm-color-primary-light: #1ab2ff;
-  --ifm-color-primary-lighter: #33baff;
-  --ifm-color-primary-lightest: #66cfff;
+  --ifm-color-primary: #9ACD32; /* Yellow green for dark mode */
+  --ifm-color-primary-dark: #6B8E23; /* Olive green */
+  --ifm-color-primary-darker: #556B2F; /* Dark olive green */
+  --ifm-color-primary-darkest: #3D4A21; /* Darkest olive green */
+  --ifm-color-primary-light: #BDDA6D; /* Light yellow green */
+  --ifm-color-primary-lighter: #D7E9A3; /* Lighter yellow green */
+  --ifm-color-primary-lightest: #F0F7E0; /* Lightest yellow green */
+  --ifm-color-secondary: #D2B48C; /* Light brown (tan) */
+  --ifm-color-success: #9ACD32; /* Yellow green */
+  --ifm-color-info: #CD853F; /* Peru brown */
+  --ifm-color-warning: #F4A460; /* Sandy brown */
+  --ifm-color-danger: #CD5C5C; /* Indian red */
+  --ifm-color-purple: #A0916B; /* Olive brown */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-background-color: #0a0a0a;
-  --ifm-font-color-base: #e0e0e0;
+  --ifm-background-color: #1A1A1A; /* Dark background */
+  --ifm-font-color-base: rgba(255, 255, 255, 0.92); /* High contrast white text */
+  --ifm-color-secondary: #D2B48C; /* Light brown text */
+  --ifm-navbar-background-color: #2F4F4F; /* Dark slate gray */
+  --ifm-border-color: #556B2F; /* Dark olive green */
+  --ifm-card-background-color: #2A2A2A; /* Dark card background */
+  --ifm-card-border-color: #6B8E23; /* Olive green border */
+  --ifm-card-hover-border-color: #D2B48C; /* Light brown hover */
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--ifm-color-primary);
   font-family: 'Orbitron', sans-serif; /* Futuristic font for headings */
+  font-weight: bold; /* Updated to bold as requested */
+}
+
+/* Enhanced typography for header */
+.navbar__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00a8ff; /* Primary accent color */
+}
+
+.navbar__subtitle {
+  font-size: 0.9rem;
+  color: #9BA1A6; /* Muted secondary color */
+  max-width: 640px;
 }
 
 .card {
@@ -54,32 +86,103 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card__header h3 {
-  color: #00a8ff;
+  color: var(--ifm-color-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.card__header h3 span {
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .card__body p {
-  color: #ccc;
+  color: var(--ifm-color-secondary); /* Using secondary color for muted text */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
 }
 
-/* Navbar */
+/* Info card typography */
+.info-card p {
+  color: var(--ifm-color-secondary); /* Using secondary color for muted text */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+/* Updated Navbar with Premium Design */
 .navbar {
-  background-color: #556B2F;
+  background-color: #2F4F4F; /* Dark slate gray */
+  padding: 24px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-bottom: 1px solid #556B2F; /* Dark olive green */
+  box-shadow: 0 0 32px rgba(107, 142, 35, 0.15); /* Olive green glow */
+}
+
+.navbar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar__items {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .navbar__title, .navbar__link {
-  color: white;
+  color: #D2B48C; /* Light brown */
   font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
 }
 
 .navbar__link:hover {
-  color: var(--ifm-color-primary);
+  color: #6B8E23; /* Olive green */
+  text-shadow: 0 0 8px rgba(107, 142, 35, 0.5); /* Olive green glow */
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar__logo {
+  height: 32px;
+  width: auto;
+}
+
+/* Dark mode specific styles */
+[data-theme='dark'] .navbar {
+  background-color: #2F4F4F; /* Dark slate gray */
+}
+
+[data-theme='dark'] .navbar__title, [data-theme='dark'] .navbar__link {
+  color: #D2B48C; /* Light brown */
+}
+
+[data-theme='dark'] .navbar__link:hover {
+  color: #9ACD32; /* Yellow green */
 }
 
 /* Hero Section */
 .hero-container {
-    background: linear-gradient(180deg, #0a0a0a, #1a1a1a);
+    background: linear-gradient(180deg, #2F4F4F, #556B2F); /* Dark slate to olive gradient */
     position: relative;
     overflow: hidden;
+    margin-top: 48px; /* Space from header */
+    margin-bottom: 6rem; /* Additional space to prevent overlap with modules */
+    padding-bottom: 4rem; /* Extra padding at bottom */
 }
 
 .hero-container::before {
@@ -89,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(0, 168, 255, 0.1), transparent 40%);
+    background: radial-gradient(circle, rgba(107, 142, 35, 0.2), transparent 40%); /* Olive green glow */
     animation: glow 10s infinite linear;
 }
 
@@ -112,11 +215,13 @@ h1, h2, h3, h4, h5, h6 {
 .hero__title {
     font-size: 4rem;
     font-weight: 700;
+    color: #D2B48C; /* Light brown */
 }
 
 .hero__subtitle {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    color: #C4D79B; /* Light olive green */
 }
 
 .buttons {
@@ -125,8 +230,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-stats {
-    background-color: rgba(26, 26, 26, 0.8);
-    border: 1px solid #333;
+    background-color: rgba(107, 142, 35, 0.3); /* Olive green transparency */
+    border: 1px solid #556B2F; /* Dark olive green */
     border-radius: 8px;
     padding: 1.5rem;
     backdrop-filter: blur(10px);
@@ -143,46 +248,706 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Modules Section */
 .modules {
-    padding: 4rem 0;
+    padding: 6rem 0; /* Increased from 4rem to 6rem */
+    margin: 0 auto;
+    max-width: 1400px;
+    margin-top: 4rem; /* Space before modules section */
+    margin-bottom: 4rem; /* Space after modules section */
+}
+
+.modules .row {
+    justify-content: center;
+    gap: 2rem;
+}
+
+.modules .col {
+    margin-bottom: 2rem;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Consistent spacing between all sections */
+section {
+    margin-bottom: 6rem;
+}
+
+section:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Card spacing */
+.card-demo {
+    height: 100%;
+    margin: 1.5rem 0; /* Added vertical margin between cards */
+    margin-bottom: 2rem; /* Additional bottom margin */
+}
+
+/* Card styling for modules */
+.card__header h3 {
+    color: #6B8E23; /* Olive green */
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.card__header h3 span {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.card__body p {
+    color: #D2B48C; /* Light brown */
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
 .card-demo {
     height: 100%;
+    margin: 1.5rem 0; /* Added vertical margin between cards */
 }
 
 .card {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
-  padding: 1.5rem;
+  background-color: var(--ifm-card-background-color); /* Using CSS variable for better dark mode support */
+  border: 2px solid #6B8E23; /* More visible olive green border */
+  border-radius: 12px; /* Increased border radius for more premium feel */
+  box-shadow: 0 4px 12px rgba(107, 142, 35, 0.2), 0 0 15px rgba(107, 142, 35, 0.15); /* Enhanced olive green soft shadows with glow */
+  transition: all 0.3s ease-in-out;
+  padding: 2rem; /* Increased padding inside cards */
   height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 168, 255, 0.3);
-  border-color: var(--ifm-color-primary);
+  transform: translateY(-4px); /* Hover movement (translateY(-4px)) */
+  box-shadow: 0 8px 20px rgba(107, 142, 35, 0.3), 0 0 25px rgba(107, 142, 35, 0.25); /* Enhanced olive green shadows with stronger glow */
+  border-color: #D2B48C; /* Light brown on hover for contrast */
+}
+
+/* Typography improvements */
+h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: var(--ifm-font-color-base);
+  line-height: 1.2;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--ifm-font-color-base);
+  line-height: 1.3;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--ifm-color-primary);
+  line-height: 1.4;
+}
+
+p {
+  line-height: 1.6;
+  color: var(--ifm-font-color-base);
+  margin: 0.75rem 0;
+}
+
+
+/* Add subtle glow effect even in non-hover state */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(0, 168, 255, 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Dark mode specific card styling */
+[data-theme='dark'] .card {
+  background-color: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-card-border-color);
+}
+
+[data-theme='dark'] .card:hover {
+  border-color: var(--ifm-card-hover-border-color);
 }
 
 .card-icon {
+    font-size: 2.5rem; /* Increased icon size */
+    margin-right: 1rem;
+    display: block; /* Make icon display on its own line in smaller viewports */
+}
+
+/* Hardware Requirements Section */
+.hardware {
+    padding: 6rem 0;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.hardware-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto 0;
+    background: var(--ifm-card-background-color);
+    border: 2px solid #8B7355; /* Brownish purple accent border */
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.15), 0 0 15px rgba(139, 115, 85, 0.1); /* Enhanced brownish purple shadow with glow */
+}
+
+.hardware-column {
+    padding: 1rem;
+}
+
+.hardware-column h3 {
+    color: #8B7355; /* Brownish purple */
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #8B7355; /* Brownish purple */
+    display: inline-block;
+}
+
+.hardware-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    padding: 0.75rem;
+    background: rgba(139, 115, 85, 0.05); /* Brownish purple background */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.hardware-item:hover {
+    background: rgba(139, 115, 85, 0.1); /* Brownish purple background */
+    transform: translateX(5px);
+}
+
+.hardware-icon {
+    font-size: 1.2rem;
+    color: #8B7355; /* Brownish purple */
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.hardware-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+.hardware-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #8B7355, #6B8E23); /* Brown to olive gradient */
+    border-radius: 2px;
+}
+
+/* Learning Outcomes Section */
+.learningOutcomes {
+    padding: 6rem 0;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Learning Outcomes Section */
+.learning-outcomes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+}
+
+.learning-outcome-item {
+    background: transparent;
+    border: 2px solid #6B8E23; /* Olive green accent border */
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15); /* Olive green soft shadow */
+}
+
+.learning-outcome-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #6B8E23, #D2B48C); /* Olive to light brown gradient */
+    opacity: 0.8;
+}
+
+.learning-outcome-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(107, 142, 35, 0.3), 0 0 20px rgba(107, 142, 35, 0.2); /* Enhanced olive green shadow with glow */
+    border-color: #D2B48C; /* Light brown */
+}
+
+.learning-outcome-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.outcome-icon {
+    font-size: 1.2rem;
+    color: #6B8E23; /* Olive green */
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.learning-outcomes-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.learning-outcomes-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #6B8E23, #D2B48C); /* Olive to light brown gradient */
+    border-radius: 2px;
+}
+
+/* Getting Started Timeline */
+.gettingStarted {
+    padding: 6rem 0;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #6B8E23, #D2B48C); /* Olive to light brown gradient */
+    border-radius: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: var(--ifm-card-background-color);
+    border: 2px solid #6B8E23; /* More visible olive green border */
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 45%;
+    box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15), 0 0 10px rgba(107, 142, 35, 0.1); /* Enhanced olive green shadow with glow */
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(107, 142, 35, 0.25), 0 0 20px rgba(107, 142, 35, 0.2); /* Enhanced olive green shadow with stronger glow */
+    border-color: #D2B48C; /* Light brown on hover */
+}
+
+.timeline-item:nth-child(odd) .timeline-step {
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-step {
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.timeline-icon {
     font-size: 2rem;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(107, 142, 35, 0.1); /* Olive green background */
+    border-radius: 50%;
+    color: #6B8E23; /* Olive green */
+}
+
+.timeline-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: #6B8E23; /* Olive green */
+    font-size: 1.2rem;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: var(--ifm-font-color-base);
+}
+
+.getting-started-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+.getting-started-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #6B8E23, #D2B48C); /* Olive to light brown gradient */
+    border-radius: 2px;
+}
+
+/* Weekly Breakdown Timeline */
+.weeklyBreakdown {
+    padding: 6rem 0;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.weekly-breakdown-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+.weekly-breakdown-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #DEB887, #6B8E23); /* Light brown to olive gradient */
+    border-radius: 2px;
+}
+
+.timeline-week {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #DEB887; /* Light brown */
+    background: rgba(222, 184, 135, 0.1); /* Light brown background */
+    border: 2px solid #DEB887; /* Light brown */
+    border-radius: 20px; /* Pill shape instead of circle */
+    width: auto;
+    min-width: 80px;
+    height: 36px;
+    padding: 0.25rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
     margin-right: 1rem;
 }
 
-/* Hardware & Learning Outcomes */
-.hardware, .learningOutcomes {
-    padding: 4rem 0;
+.week-topics {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0 0;
 }
 
-.info-card {
-    background-color: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 8px;
+.week-topics li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+    color: #D2B48C; /* Light brown */
+}
+
+.week-topics li::before {
+    content: '•';
+    color: #DEB887; /* Light brown */
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* Assessments Section */
+.assessments {
+    padding: 6rem 0;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.assessments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+}
+
+.assessment-card {
+    background: var(--ifm-card-background-color);
+    border: 2px solid #A0522D; /* Sienna brown accent border */
+    border-radius: 12px;
     padding: 1.5rem;
-    text-align: center;
-    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(160, 82, 45, 0.15), 0 0 10px rgba(160, 82, 45, 0.1); /* Enhanced brown shadow with glow */
+}
+
+.assessment-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #A0522D, #6B8E23); /* Brown to olive gradient */
+    opacity: 0.8;
+}
+
+.assessment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(160, 82, 45, 0.25), 0 0 20px rgba(160, 82, 45, 0.2); /* Enhanced brown shadow with stronger glow */
+    border-color: #6B8E23; /* Olive green */
+}
+
+.assessment-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.assessment-icon {
+    font-size: 1.5rem;
+    color: #A0522D; /* Sienna brown */
+}
+
+.assessment-header h3 {
+    margin: 0;
+    color: #6B8E23; /* Olive green */
+    font-size: 1.2rem;
+}
+
+.assessment-description {
+    margin: 0.75rem 0;
+    color: var(--ifm-font-color-base);
+    line-height: 1.5;
+}
+
+.assessment-type {
+    display: inline-block;
+    background: rgba(160, 82, 45, 0.1); /* Brown background */
+    color: #A0522D; /* Sienna brown */
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.assessments-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+.assessments-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #A0522D, #6B8E23); /* Brown to olive gradient */
+    border-radius: 2px;
+}
+
+/* Additional Resources Section */
+.additionalResources {
+    padding: 6rem 0;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+}
+
+.resource-card {
+    background: var(--ifm-card-background-color);
+    border: 2px solid #6B8E23; /* Olive green border */
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15), 0 0 10px rgba(107, 142, 35, 0.1); /* Enhanced olive green shadow with glow */
+}
+
+.resource-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #6B8E23, #D2B48C); /* Olive to light brown gradient */
+    opacity: 0.8;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(107, 142, 35, 0.2); /* Olive green shadow */
+    border-color: #6B8E23; /* Olive green */
+}
+
+.resource-card:hover::before {
+    transform: scaleX(1);
+}
+
+.resource-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.resource-icon {
+    font-size: 1.5rem;
+    color: #6B8E23; /* Olive green */
+}
+
+.resource-header h3 {
+    margin: 0;
+    color: #6B8E23; /* Olive green */
+    font-size: 1.2rem;
+}
+
+.resource-description {
+    margin: 0.75rem 0 1.25rem;
+    color: var(--ifm-font-color-base);
+    line-height: 1.5;
+}
+
+.resource-link {
+    display: inline-block;
+    color: #6B8E23; /* Olive green */
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.resource-card:hover .resource-link {
+    color: #D2B48C; /* Light brown */
+    transform: translateX(3px);
+}
+
+.resources-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+.resources-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #6B8E23, #D2B48C); /* Olive to light brown gradient */
+    border-radius: 2px;
+}
+
+/* Enhanced button styles with glow effects */
+.button {
+  background-color: #6B8E23; /* Olive green */
+  color: white;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  border: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(107, 142, 35, 0.4); /* Olive green glow */
+  background-color: #556B2F; /* Darker olive green */
+}
+
+/* Focus states for accessibility */
+.navbar__link:focus-visible,
+.button:focus-visible {
+  outline: 2px solid #6B8E23; /* Olive green */
+  outline-offset: 3px;
 }
 
 @media screen and (max-width: 996px) {
