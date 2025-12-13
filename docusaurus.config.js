@@ -20,7 +20,11 @@ const config = {
   },
 
   // Set the production url of your site here
+<<<<<<< HEAD
   url: 'https://your-vercel-domain.vercel.app',
+=======
+  url: ''https://your-vercel-domain.vercel.app'',
+>>>>>>> 4ba34c401eae61ffd1ba185266c31bff40056eef
   // Set the /<baseUrl>/ pathname under which your site is served
   // For Vercel deployment, use root path
       baseUrl: '/',
@@ -74,8 +78,13 @@ const config = {
             title: 'Physical AI & Humanoid Robotics',
             logo: {
               alt: 'Physical AI & Humanoid Robotics Textbook Logo',
+<<<<<<< HEAD
               src: 'img/logo-light.svg',
               srcDark: 'img/logo-dark.svg',
+=======
+              src: 'img/logo.svg',
+              srcDark: 'img/logo.svg',
+>>>>>>> 4ba34c401eae61ffd1ba185266c31bff40056eef
             },
             items: [
               {
