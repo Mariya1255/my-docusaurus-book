@@ -73,19 +73,24 @@ const config = {
           navbar: {
             title: 'Physical AI & Humanoid Robotics',
             logo: {
-              alt: 'Humanoid Robotics Book Logo',
+              alt: 'Physical AI & Humanoid Robotics Textbook Logo',
               src: 'img/logo.svg',
+              srcDark: 'img/logo.svg',
             },
             items: [
               {
                 type: 'docSidebar',
                 sidebarId: 'bookSidebar',
                 position: 'left',
-                label: 'Book',
+                label: 'Textbook',
               },
-              {to: '/blog', label: 'Blog', position: 'left'},
               {
-                href: 'https://github.com/Mariya1255/humanoid-robotics-book',
+                to: '/',
+                label: 'Home',
+                position: 'left',
+              },
+              {
+                href: 'https://github.com/Mariya1255/my-docusaurus-book',
                 label: 'GitHub',
                 position: 'right',
               },
